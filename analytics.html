@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VibeFlow | Analytics</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="dashboard-header">
+    <div class="container header-container">
+      <div class="logo-container">
+        <img class="logo-img" src="assets/logo 3.png" alt="VibeFlow Logo">
+        <div class="logo-text">
+          <h1>VibeFlow</h1>
+          <p class="tagline">Sentiment Analysis Dashboard</p>
+        </div>
+      </div>
+      <nav class="main-nav">
+        <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="analytics.html"><i class="fas fa-chart-pie"></i> Analytics</a></li>
+            <li><a href="settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+          </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="analytics-dashboard">
+    <div class="container">
+      <div class="dashboard-controls">
+        <div class="analysis-meta">
+          <h2>Post Analysis</h2>
+          <div class="post-info">
+            <span class="platform-badge"><i class="fab fa-instagram"></i> Instagram</span>
+            <p class="post-url">https://instagram.com/p/Cxample123/</p>
+            <span class="last-updated">Updated: Just now</span>
+          </div>
+        </div>
+        <div class="time-filter">
+          <select class="time-selector">
+            <option value="24h">Last 24 hours</option>
+            <option value="7d" selected>Last 7 days</option>
+            <option value="30d">Last 30 days</option>
+          </select>
+          <button class="btn btn-secondary"><i class="fas fa-sync-alt"></i> Refresh</button>
+        </div>
+      </div>
+
+      <div class="summary-cards">
+        <div class="summary-card positive">
+          <div class="card-content">
+            <h3>Positive</h3>
+            <p class="card-value">1,243 <span class="percentage">(62%)</span></p>
+            <p class="card-change"><i class="fas fa-arrow-up"></i> 12% from yesterday</p>
+          </div>
+        </div>
+        
+        <div class="summary-card neutral">
+          <div class="card-content">
+            <h3>Neutral</h3>
+            <p class="card-value">512 <span class="percentage">(26%)</span></p>
+            <p class="card-change"><i class="fas fa-minus"></i> No change</p>
+          </div>
+        </div>
+        
+        <div class="summary-card negative">
+          <div class="card-content">
+            <h3>Negative</h3>
+            <p class="card-value">245 <span class="percentage">(12%)</span></p>
+            <p class="card-change"><i class="fas fa-arrow-down"></i> 5% from yesterday</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="emotion-plot-grid">
+        <div class="emotion-plot-card">
+          <div class="emotion-plot-header">
+            <div class="emotion-icon happy">
+              <i class="fas fa-smile"></i>
+            </div>
+            <h3>Happiness Level</h3>
+          </div>
+          <div class="plot-container">Happiness Chart Will Appear Here</div>
+          <div class="plot-stats">
+            <span>82% Positive</span>
+            <span>15% Neutral</span>
+            <span>3% Negative</span>
+          </div>
+        </div>
+
+        <div class="emotion-plot-card">
+          <div class="emotion-plot-header">
+            <div class="emotion-icon sad">
+              <i class="fas fa-sad-tear"></i>
+            </div>
+            <h3>Sadness Detection</h3>
+          </div>
+          <div class="plot-container">Sadness Chart Will Appear Here</div>
+          <div class="plot-stats">
+            <span>12% Detected</span>
+            <span>88% Not Detected</span>
+          </div>
+        </div>
+
+        <div class="emotion-plot-card">
+          <div class="emotion-plot-header">
+            <div class="emotion-icon sarcasm">
+              <i class="fas fa-comment-dots"></i>
+            </div>
+            <h3>Sarcasm Detection</h3>
+          </div>
+          <div class="plot-container">Sarcasm Chart Will Appear Here</div>
+          <div class="plot-stats">
+            <span>23% Likely</span>
+            <span>77% Unlikely</span>
+          </div>
+        </div>
+
+        <div class="emotion-plot-card">
+          <div class="emotion-plot-header">
+            <div class="emotion-icon irony">
+              <i class="fas fa-comment-slash"></i>
+            </div>
+            <h3>Irony Detection</h3>
+          </div>
+          <div class="plot-container">Irony Chart Will Appear Here</div>
+          <div class="plot-stats">
+            <span>18% Present</span>
+            <span>82% Absent</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="dashboard-footer">
+    <div class="container">
+      <div class="footer-content">
+        <!--<div class="footer-logo">
+          <img src="assets/logo 3.png" alt="VibeFlow Logo" width="120">
+        </div> -->
+        <div class="footer-links">
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2025 VibeFlow. All rights reserved.</p>
+      </div>
+    </div>
+    <div class="footer-content"><span class="footer-text">Made with ❤️ by VibeFlow</span>
+    </div>
+    <div id="heart-container"></div>
+    </div>
+  </footer>
+  <script src="js/analytics.js"></script>
+</body>
+</html>
